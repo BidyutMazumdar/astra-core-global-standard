@@ -2,7 +2,7 @@
 ## Global Sovereign Decision Intelligence Standard  
 
 **Author:** Dr. B. Mazumdar  
-**Version:** 3.0 (Absolute Final Lock Edition)  
+**Version:** 1.0   
 **Status:** Institutional-Grade Global Standard  
 **License:** ASTRA CORE™ Sovereign Proprietary License  
 
@@ -155,7 +155,7 @@ The system aligns conceptually with global governance, economic, and cybersecuri
 
 # Version Control  
 
-Version 3.0 represents the Absolute Final Lock Edition, incorporating:  
+Version 1.0 represents the Absolute Final Lock Edition, incorporating:  
 
 - Full architectural integration  
 - Audit-grade dataset structure  

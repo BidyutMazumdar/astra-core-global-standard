@@ -1,0 +1,243 @@
+{
+  "system_name": "ASTRA CORE Sovereign Simulation System",
+  "version": "1.0",
+  "type": "master_orchestration_engine",
+  "description": "Central orchestration layer integrating all sovereign scenarios, Monte Carlo simulation engine, and probabilistic decision modeling into a unified execution framework.",
+
+  "architecture": {
+    "layers": [
+      "scenario_layer",
+      "simulation_engine_layer",
+      "aggregation_layer",
+      "output_intelligence_layer"
+    ],
+    "execution_mode": "hierarchical_orchestration",
+    "integration_type": "multi-scenario probabilistic fusion"
+  },
+
+  "scenario_registry": {
+    "baseline": {
+      "file": "scenario_baseline.json",
+      "type": "control",
+      "priority": "reference"
+    },
+    "cyber_attack": {
+      "file": "scenario_cyber_attack.json",
+      "type": "shock",
+      "priority": "high"
+    },
+    "war": {
+      "file": "scenario_war.json",
+      "type": "systemic_shock",
+      "priority": "critical"
+    },
+    "economic_crisis": {
+      "file": "scenario_economic_crisis.json",
+      "type": "systemic_shock",
+      "priority": "high"
+    },
+    "social_instability": {
+      "file": "scenario_social_instability.json",
+      "type": "systemic_shock",
+      "priority": "high"
+    }
+  },
+
+  "scenario_execution_mapping": {
+    "baseline": {
+      "mode": "no_shock",
+      "parameter_adjustment": "none"
+    },
+    "cyber_attack": {
+      "mode": "shock_override",
+      "target_variables": ["cyber_stability"],
+      "impact_type": "direct"
+    },
+    "war": {
+      "mode": "systemic_override",
+      "target_variables": [
+        "cyber_stability",
+        "economic_resilience",
+        "social_stability",
+        "legal_coherence",
+        "ai_governance"
+      ],
+      "impact_type": "multi_domain"
+    },
+    "economic_crisis": {
+      "mode": "economic_primary",
+      "target_variables": [
+        "economic_resilience",
+        "social_stability"
+      ],
+      "impact_type": "cascading"
+    },
+    "social_instability": {
+      "mode": "social_primary",
+      "target_variables": [
+        "social_stability",
+        "economic_resilience",
+        "legal_coherence"
+      ],
+      "impact_type": "feedback_loop"
+    }
+  },
+
+  "engine_binding": {
+    "simulation_engine": "astra_core_monte_carlo.json",
+    "execution_method": "scenario_weighted_sampling",
+    "synchronization": "deterministic_seed_alignment"
+  },
+
+  "execution_pipeline": {
+    "step_1": "load_scenarios",
+    "step_2": "initialize_distributions",
+    "step_3": "apply_correlation_structure",
+    "step_4": "inject_scenario_weights",
+    "step_5": "trigger_stochastic_simulation",
+    "step_6": "apply_shock_injection",
+    "step_7": "aggregate_outputs",
+    "step_8": "compute_risk_metrics",
+    "step_9": "generate_intelligence_outputs"
+  },
+
+  "scenario_weighting_control": {
+    "source": "engine_defined",
+    "normalization": "strict",
+    "constraint": "sum(weights)=1",
+    "override_mode": "allowed_with_validation"
+  },
+
+  "shock_orchestration": {
+    "shock_activation": "probabilistic",
+    "shock_priority_order": [
+      "war",
+      "cyber_attack",
+      "economic_crisis",
+      "social_instability"
+    ],
+    "conflict_resolution": "max_intensity_dominance",
+    "multi_shock_handling": "nonlinear_superposition"
+  },
+
+  "temporal_dynamics": {
+    "time_steps": "discrete",
+    "update_mode": "iterative",
+    "state_transition": "markovian_with_feedback",
+    "memory_effects": "enabled"
+  },
+
+  "aggregation_framework": {
+    "method": "weighted_probabilistic_aggregation",
+    "risk_classification_thresholds": {
+      "low_risk": ">0.75",
+      "moderate_risk": "0.60-0.75",
+      "high_risk": "<0.60"
+    },
+    "extreme_event_threshold": 0.60
+  },
+
+  "uncertainty_propagation": {
+    "method": "monte_carlo_distribution_tracking",
+    "confidence_intervals": [5, 95],
+    "variance_tracking": true,
+    "tail_risk_analysis": "enabled"
+  },
+
+  "sensitivity_engine": {
+    "enabled": true,
+    "method": "global_variance_decomposition",
+    "output": "ranked_influence_factors"
+  },
+
+  "robustness_engine": {
+    "stress_testing": true,
+    "scenario_perturbation": "randomized",
+    "stability_index_computation": "enabled"
+  },
+
+  "output_intelligence": {
+    "outputs": [
+      "decision_integrity_distribution",
+      "risk_probability_map",
+      "scenario_comparison_matrix",
+      "tail_risk_profile",
+      "system_stability_index"
+    ],
+    "visualization": [
+      "distribution_curves",
+      "heatmaps",
+      "stress_response_graphs"
+    ]
+  },
+
+  "execution_output_schema": {
+    "decision_integrity_score": "float",
+    "confidence_interval": {
+      "lower": "float",
+      "upper": "float"
+    },
+    "risk_classification": "string",
+    "scenario_contributions": {
+      "baseline": "float",
+      "cyber_attack": "float",
+      "economic_crisis": "float",
+      "social_instability": "float",
+      "war": "float"
+    },
+    "tail_risk_probability": "float",
+    "stability_index": "float"
+  },
+
+  "audit_and_governance": {
+    "reproducibility": true,
+    "seed_control": true,
+    "data_lineage": "full_traceability",
+    "validation_checks": [
+      "distribution_bounds_check",
+      "correlation_matrix_validation",
+      "weight_normalization_check",
+      "numerical_stability_check"
+    ]
+  },
+
+  "execution_safeguards": {
+    "numerical_stability": {
+      "cholesky_fallback": "eigenvalue_decomposition",
+      "matrix_regularization": true,
+      "regularization_epsilon": 1e-6
+    },
+    "sampling_controls": {
+      "nan_protection": true,
+      "overflow_handling": "clipping",
+      "bounds_enforcement": "strict"
+    },
+    "failure_recovery": {
+      "retry_on_failure": true,
+      "max_retries": 3,
+      "fallback_mode": "baseline_only"
+    },
+    "notes": "Ensures stable execution under edge-case stochastic conditions and guarantees simulation continuity"
+  },
+
+  "system_constraints": {
+    "bounded_variables": true,
+    "numerical_stability": "enforced",
+    "consistency_rules": [
+      "variable_name_alignment",
+      "scenario_engine_compatibility",
+      "probability_mass_conservation"
+    ]
+  },
+
+  "usage": {
+    "applications": [
+      "sovereign decision intelligence",
+      "national risk simulation",
+      "defense strategic modeling",
+      "economic policy stress testing",
+      "AI governance risk evaluation"
+    ],
+    "mode": "integrated_probabilistic_decision_system"
+  }
+}

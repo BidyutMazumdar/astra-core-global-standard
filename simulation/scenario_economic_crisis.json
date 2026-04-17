@@ -1,0 +1,141 @@
+{
+  "scenario_name": "Systemic Economic Crisis Scenario",
+  "version": "3.0",
+  "type": "systemic_shock",
+  "category": "economic_crisis",
+  "description": "This scenario models a severe macroeconomic crisis characterized by financial instability, market collapse, fiscal stress, and cascading effects across governance, social stability, and cyber infrastructure.",
+
+  "time_horizon": "medium_term",
+
+  "shock_profile": {
+    "intensity": "high",
+    "duration": "medium_to_long_term",
+    "primary_target": "economic_system",
+    "propagation_mode": "cross-domain cascading",
+    "crisis_type": "financial_systemic_shock"
+  },
+
+  "input_variables": {
+    "cyber_stability": {
+      "value": 0.85,
+      "post_shock_value": 0.75,
+      "status": "slightly_degraded",
+      "description": "Indirect impact due to reduced investment and operational constraints"
+    },
+    "ai_governance": {
+      "value": 0.82,
+      "post_shock_value": 0.74,
+      "status": "strained",
+      "description": "Slower regulatory development and constrained AI deployment due to economic pressure"
+    },
+    "legal_coherence": {
+      "value": 0.84,
+      "post_shock_value": 0.70,
+      "status": "stressed",
+      "description": "Emergency fiscal policies and regulatory inconsistencies affect legal stability"
+    },
+    "economic_resilience": {
+      "value": 0.83,
+      "post_shock_value": 0.55,
+      "status": "collapsed",
+      "description": "Severe contraction, financial system instability, and liquidity crisis"
+    },
+    "social_stability": {
+      "value": 0.80,
+      "post_shock_value": 0.65,
+      "status": "volatile",
+      "description": "Unemployment, inequality, and public unrest increase"
+    }
+  },
+
+  "computation": {
+    "formula": "D = 0.25C + 0.20A + 0.20L + 0.20E + 0.15S",
+    "baseline_score": 0.83,
+    "post_shock_score": 0.68,
+    "score_delta": -0.15,
+    "classification": "Moderate to High Risk System",
+    "confidence_level": "high"
+  },
+
+  "shock_propagation": {
+    "primary_impact": "economic_resilience",
+    "secondary_effects": [
+      "social_stability",
+      "legal_coherence"
+    ],
+    "tertiary_effects": [
+      "ai_governance",
+      "cyber_stability"
+    ],
+    "propagation_pattern": "economic collapse → social instability → legal fragmentation → technological slowdown",
+    "propagation_type": "cascading_linear_with_feedback"
+  },
+
+  "expected_output_shifts": {
+    "cyber_stability": {
+      "delta": -0.10,
+      "impact": "Reduced investment weakens cyber capabilities"
+    },
+    "ai_governance": {
+      "delta": -0.08,
+      "impact": "Slowed AI development and governance"
+    },
+    "legal_coherence": {
+      "delta": -0.14,
+      "impact": "Policy inconsistency due to emergency economic measures"
+    },
+    "economic_resilience": {
+      "delta": -0.28,
+      "impact": "Severe macroeconomic contraction and instability"
+    },
+    "social_stability": {
+      "delta": -0.15,
+      "impact": "Rising unemployment and social unrest"
+    },
+    "decision_integrity_score": {
+      "delta": -0.15,
+      "impact": "System degrades from stable to moderate-high risk"
+    }
+  },
+
+  "recovery_dynamics": {
+    "economic_recovery_time": "medium_to_long_term",
+    "social_recovery_time": "medium_term",
+    "legal_recovery_time": "medium_term",
+    "cyber_recovery_time": "short_to_medium_term",
+    "recovery_pattern": "financial stabilization → policy correction → economic recovery → social normalization",
+    "recovery_complexity": "moderate_to_high"
+  },
+
+  "risk_assessment": {
+    "overall_risk_level": "high",
+    "system_stability": "degraded",
+    "shock_resilience": "moderate",
+    "critical_vulnerabilities": [
+      "financial_system_instability",
+      "unemployment_pressure",
+      "policy_response_delay"
+    ]
+  },
+
+  "uncertainty_model": {
+    "confidence_interval": {
+      "lower_bound": 0.65,
+      "upper_bound": 0.71
+    },
+    "sensitivity_factors": [
+      "monetary policy response",
+      "fiscal intervention scale",
+      "global market conditions",
+      "banking system stability"
+    ],
+    "model_uncertainty": "moderate",
+    "notes": "Outcome variability depends on policy response speed and global economic environment"
+  },
+
+  "simulation_notes": {
+    "purpose": "Evaluates systemic impact of economic crises across sovereign domains",
+    "interpretation": "Highlights economic system as primary driver of cross-domain instability",
+    "usage": "Macroeconomic policy modeling, financial stability analysis, and crisis response planning"
+  }
+}

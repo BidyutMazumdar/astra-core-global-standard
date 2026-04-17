@@ -1,0 +1,164 @@
+{
+  "engine_name": "ASTRA CORE Monte Carlo Simulation Engine",
+  "version": "1.0",
+  "type": "probabilistic_simulation",
+  "description": "Monte Carlo simulation layer enabling probabilistic sovereign system analysis through stochastic modeling, uncertainty propagation, and multi-scenario risk evaluation.",
+
+  "simulation_parameters": {
+    "num_iterations": 10000,
+    "time_horizon": "multi_period",
+    "random_seed": 42,
+    "convergence_threshold": 0.001
+  },
+
+  "input_distributions": {
+    "cyber_stability": {
+      "distribution": "normal",
+      "mean": 0.85,
+      "std_dev": 0.08,
+      "bounds": [0.40, 1.00]
+    },
+    "ai_governance": {
+      "distribution": "normal",
+      "mean": 0.82,
+      "std_dev": 0.07,
+      "bounds": [0.45, 1.00]
+    },
+    "legal_coherence": {
+      "distribution": "normal",
+      "mean": 0.84,
+      "std_dev": 0.06,
+      "bounds": [0.50, 1.00]
+    },
+    "economic_resilience": {
+      "distribution": "normal",
+      "mean": 0.83,
+      "std_dev": 0.09,
+      "bounds": [0.40, 1.00]
+    },
+    "social_stability": {
+      "distribution": "normal",
+      "mean": 0.80,
+      "std_dev": 0.10,
+      "bounds": [0.35, 1.00]
+    },
+
+    "distribution_constraints": {
+      "bounded": true,
+      "method": "truncated_normal",
+      "enforcement": "hard_clipping",
+      "notes": "Ensures all sampled values remain within defined bounds for numerical stability and real-world consistency"
+    }
+  },
+
+  "correlation_matrix": {
+    "variables": [
+      "cyber_stability",
+      "ai_governance",
+      "legal_coherence",
+      "economic_resilience",
+      "social_stability"
+    ],
+    "matrix": [
+      [1.00, 0.30, 0.35, 0.45, 0.40],
+      [0.30, 1.00, 0.55, 0.40, 0.35],
+      [0.35, 0.55, 1.00, 0.50, 0.45],
+      [0.45, 0.40, 0.50, 1.00, 0.60],
+      [0.40, 0.35, 0.45, 0.60, 1.00]
+    ],
+    "structure": "symmetric_positive_definite",
+    "notes": "Validated for Cholesky decomposition and covariance-consistent sampling"
+  },
+
+  "computation_model": {
+    "formula": "D = 0.25C + 0.20A + 0.20L + 0.20E + 0.15S",
+    "method": "stochastic_sampling",
+    "aggregation": "mean_with_variance_tracking"
+  },
+
+  "output_metrics": {
+    "decision_integrity_distribution": {
+      "mean": null,
+      "median": null,
+      "std_dev": null
+    },
+    "risk_probabilities": {
+      "low_risk_probability": null,
+      "moderate_risk_probability": null,
+      "high_risk_probability": null
+    },
+    "extreme_event_probability": {
+      "threshold": 0.60,
+      "probability": null
+    }
+  },
+
+  "scenario_integration": {
+    "supported_scenarios": [
+      "scenario_baseline.json",
+      "scenario_cyber_attack.json",
+      "scenario_war.json",
+      "scenario_economic_crisis.json",
+      "scenario_social_instability.json"
+    ],
+    "mode": "scenario_weighted_sampling",
+    "scenario_weights": {
+      "baseline": 0.40,
+      "cyber_attack": 0.15,
+      "economic_crisis": 0.15,
+      "social_instability": 0.15,
+      "war": 0.15
+    },
+    "validation": {
+      "weights_sum": 1.00,
+      "normalization": "validated",
+      "constraint": "sum(weights) = 1.0"
+    }
+  },
+
+  "shock_injection_model": {
+    "method": "randomized_shock_trigger",
+    "shock_probability": 0.25,
+    "shock_intensity_distribution": "uniform",
+    "shock_intensity_range": [0.10, 0.40]
+  },
+
+  "sensitivity_analysis": {
+    "enabled": true,
+    "method": "variance_decomposition",
+    "output": "factor_importance_ranking"
+  },
+
+  "robustness_metrics": {
+    "confidence_interval": {
+      "method": "percentile",
+      "lower_percentile": 5,
+      "upper_percentile": 95
+    },
+    "stability_score": null,
+    "model_variance": null
+  },
+
+  "simulation_outputs": {
+    "distribution_curve": "generated",
+    "risk_heatmap": "generated",
+    "scenario_comparison_matrix": "generated"
+  },
+
+  "audit_trail": {
+    "reproducibility": true,
+    "random_seed_fixed": true,
+    "data_traceability": "full",
+    "version_control": "enabled"
+  },
+
+  "usage": {
+    "applications": [
+      "sovereign risk forecasting",
+      "policy stress testing",
+      "defense scenario simulation",
+      "economic resilience modeling"
+    ],
+    "output_type": "probabilistic_decision_support"
+  }
+}

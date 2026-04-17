@@ -1,0 +1,133 @@
+{
+  "scenario_name": "Cyber Attack Shock Scenario",
+  "version": "3.0",
+  "type": "shock",
+  "category": "cyber",
+  "description": "This scenario models a high-impact cyber attack affecting critical infrastructure, disrupting digital systems, governance processes, and cascading into economic and social instability.",
+
+  "time_horizon": "short_to_medium_term",
+
+  "shock_profile": {
+    "intensity": "high",
+    "duration": "short_term_disruption_with_medium_term_effects",
+    "primary_target": "critical_digital_infrastructure",
+    "propagation_mode": "cross-domain cascading"
+  },
+
+  "input_variables": {
+    "cyber_stability": {
+      "value": 0.85,
+      "post_shock_value": 0.55,
+      "status": "compromised",
+      "description": "Major cyber breach affecting infrastructure, data integrity, and system operations"
+    },
+    "ai_governance": {
+      "value": 0.82,
+      "post_shock_value": 0.70,
+      "status": "disrupted",
+      "description": "AI systems face operational disruption and emergency regulatory intervention"
+    },
+    "legal_coherence": {
+      "value": 0.84,
+      "post_shock_value": 0.75,
+      "status": "strained",
+      "description": "Emergency measures and regulatory inconsistencies emerge"
+    },
+    "economic_resilience": {
+      "value": 0.83,
+      "post_shock_value": 0.72,
+      "status": "stressed",
+      "description": "Market disruption, financial instability, and operational slowdown"
+    },
+    "social_stability": {
+      "value": 0.80,
+      "post_shock_value": 0.68,
+      "status": "volatile",
+      "description": "Public anxiety, trust erosion, and potential unrest"
+    }
+  },
+
+  "computation": {
+    "formula": "D = 0.25C + 0.20A + 0.20L + 0.20E + 0.15S",
+    "baseline_score": 0.83,
+    "post_shock_score": 0.69,
+    "score_delta": -0.14,
+    "classification": "Moderate Risk System",
+    "confidence_level": "high"
+  },
+
+  "shock_propagation": {
+    "primary_impact": "cyber_stability",
+    "secondary_effects": [
+      "economic_resilience",
+      "ai_governance"
+    ],
+    "tertiary_effects": [
+      "legal_coherence",
+      "social_stability"
+    ],
+    "propagation_pattern": "cyber → economic → governance → social"
+  },
+
+  "expected_output_shifts": {
+    "cyber_stability": {
+      "delta": -0.30,
+      "impact": "Severe degradation of digital infrastructure"
+    },
+    "ai_governance": {
+      "delta": -0.12,
+      "impact": "Operational disruption and regulatory tightening"
+    },
+    "legal_coherence": {
+      "delta": -0.09,
+      "impact": "Emergency legal measures reduce consistency"
+    },
+    "economic_resilience": {
+      "delta": -0.11,
+      "impact": "Market and operational instability"
+    },
+    "social_stability": {
+      "delta": -0.12,
+      "impact": "Public unrest and trust decline"
+    },
+    "decision_integrity_score": {
+      "delta": -0.14,
+      "impact": "System drops from stable to moderate risk category"
+    }
+  },
+
+  "recovery_dynamics": {
+    "cyber_recovery_time": "short_to_medium_term",
+    "economic_recovery_time": "medium_term",
+    "social_recovery_time": "medium_to_long_term",
+    "recovery_pattern": "cyber restoration → economic stabilization → social normalization"
+  },
+
+  "risk_assessment": {
+    "overall_risk_level": "moderate_to_high",
+    "system_stability": "degraded",
+    "shock_resilience": "moderate",
+    "critical_vulnerability": "cyber_dependency"
+  },
+
+  "uncertainty_model": {
+    "confidence_interval": {
+      "lower_bound": 0.66,
+      "upper_bound": 0.72
+    },
+    "sensitivity_factors": [
+      "cyber response speed",
+      "policy intervention effectiveness",
+      "financial system resilience",
+      "public trust stability"
+    ],
+    "model_uncertainty": "moderate",
+    "notes": "Outcome variability depends on response efficiency and cross-domain coordination"
+  },
+
+  "simulation_notes": {
+    "purpose": "Evaluates systemic vulnerability to cyber shocks and cross-domain cascading effects",
+    "interpretation": "Highlights dependency of governance and economy on cyber infrastructure",
+    "usage": "Cybersecurity policy modeling, national resilience planning, and crisis response simulation"
+  }
+}

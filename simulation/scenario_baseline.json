@@ -1,0 +1,92 @@
+{
+  "scenario_id": "SCN_BASELINE_001",
+  "scenario_name": "Baseline Stability Scenario",
+  "version": "3.0",
+  "type": "control",
+  "description": "This scenario represents a stable sovereign environment with no major shocks across cyber, AI governance, legal, economic, or social domains. It serves as the reference baseline for comparative simulation analysis.",
+
+  "time_horizon": "short_to_medium_term",
+
+  "input_variables": {
+    "cyber_stability": {
+      "value": 0.85,
+      "status": "stable",
+      "description": "No major cyber incidents; stable digital infrastructure and security posture"
+    },
+    "ai_governance": {
+      "value": 0.82,
+      "status": "controlled",
+      "description": "Regulated AI deployment with policy oversight and governance frameworks in place"
+    },
+    "legal_coherence": {
+      "value": 0.84,
+      "status": "consistent",
+      "description": "Strong rule-of-law environment with predictable regulatory enforcement"
+    },
+    "economic_resilience": {
+      "value": 0.83,
+      "status": "stable",
+      "description": "Balanced macroeconomic performance with moderate growth and stability"
+    },
+    "social_stability": {
+      "value": 0.80,
+      "status": "cohesive",
+      "description": "Low social unrest, stable public sentiment, and institutional trust"
+    }
+  },
+
+  "computation": {
+    "formula": "D = 0.25C + 0.20A + 0.20L + 0.20E + 0.15S",
+    "calculated_score": 0.83,
+    "classification": "Stable System",
+    "confidence_level": "high"
+  },
+
+  "output_variables": {
+    "cyber_stability": 0.85,
+    "ai_governance": 0.82,
+    "legal_coherence": 0.84,
+    "economic_resilience": 0.83,
+    "social_stability": 0.80,
+    "decision_integrity_score": 0.83
+  },
+
+  "expected_output_shifts": {
+    "cyber_stability": {
+      "delta": 0.00,
+      "impact": "No change expected under stable conditions"
+    },
+    "ai_governance": {
+      "delta": 0.00,
+      "impact": "No regulatory disruption or acceleration"
+    },
+    "legal_coherence": {
+      "delta": 0.00,
+      "impact": "Stable institutional consistency"
+    },
+    "economic_resilience": {
+      "delta": 0.00,
+      "impact": "No macroeconomic shock"
+    },
+    "social_stability": {
+      "delta": 0.00,
+      "impact": "No major social unrest or disruption"
+    },
+    "decision_integrity_score": {
+      "delta": 0.00,
+      "impact": "System remains within stable performance band"
+    }
+  },
+
+  "risk_assessment": {
+    "overall_risk_level": "low",
+    "system_stability": "high",
+    "shock_resilience": "moderate_to_high"
+  },
+
+  "simulation_notes": {
+    "purpose": "Provides a benchmark reference for comparing stress scenarios such as cyber attacks, war, economic crises, and social instability",
+    "interpretation": "All deviations in other scenarios should be measured relative to this baseline state",
+    "usage": "Policy modeling, comparative analysis, and system validation"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "scenario_name": "Full-Scale War Systemic Shock Scenario",
+  "version": "3.0",
+  "type": "systemic_shock",
+  "category": "geopolitical_conflict",
+  "description": "This scenario models a full-scale war impacting sovereign systems across cyber, economic, legal, and social domains, resulting in systemic instability, institutional stress, and prolonged recovery timelines.",
+
+  "time_horizon": "medium_to_long_term",
+
+  "shock_profile": {
+    "intensity": "extreme",
+    "duration": "prolonged",
+    "primary_target": "multi-domain national systems",
+    "propagation_mode": "nonlinear cascading",
+    "conflict_type": "conventional_plus_hybrid"
+  },
+
+  "input_variables": {
+    "cyber_stability": {
+      "value": 0.85,
+      "post_shock_value": 0.50,
+      "status": "severely_compromised",
+      "description": "Sustained cyber warfare targeting infrastructure, communications, and defense systems"
+    },
+    "ai_governance": {
+      "value": 0.82,
+      "post_shock_value": 0.65,
+      "status": "militarized",
+      "description": "AI systems redirected toward military use with reduced regulatory oversight"
+    },
+    "legal_coherence": {
+      "value": 0.84,
+      "post_shock_value": 0.60,
+      "status": "fragmented",
+      "description": "Emergency powers, suspension of norms, and breakdown of legal consistency"
+    },
+    "economic_resilience": {
+      "value": 0.83,
+      "post_shock_value": 0.58,
+      "status": "disrupted",
+      "description": "Severe economic contraction, supply chain collapse, and fiscal stress"
+    },
+    "social_stability": {
+      "value": 0.80,
+      "post_shock_value": 0.55,
+      "status": "unstable",
+      "description": "Population displacement, unrest, and erosion of public trust"
+    }
+  },
+
+  "computation": {
+    "formula": "D = 0.25C + 0.20A + 0.20L + 0.20E + 0.15S",
+    "baseline_score": 0.83,
+    "post_shock_score": 0.58,
+    "score_delta": -0.25,
+    "classification": "High Risk / Systemic Instability",
+    "confidence_level": "moderate"
+  },
+
+  "shock_propagation": {
+    "primary_impact": "systemic_multi_domain",
+    "secondary_effects": [
+      "economic_resilience",
+      "social_stability"
+    ],
+    "tertiary_effects": [
+      "legal_coherence",
+      "ai_governance",
+      "cyber_stability"
+    ],
+    "propagation_pattern": "geopolitical_conflict → economic collapse → social instability → governance breakdown → cyber disruption",
+    "propagation_type": "nonlinear_feedback_loop"
+  },
+
+  "expected_output_shifts": {
+    "cyber_stability": {
+      "delta": -0.35,
+      "impact": "Persistent cyber warfare and infrastructure damage"
+    },
+    "ai_governance": {
+      "delta": -0.17,
+      "impact": "Shift from civilian governance to military utilization"
+    },
+    "legal_coherence": {
+      "delta": -0.24,
+      "impact": "Legal fragmentation under emergency conditions"
+    },
+    "economic_resilience": {
+      "delta": -0.25,
+      "impact": "Severe contraction and systemic disruption"
+    },
+    "social_stability": {
+      "delta": -0.25,
+      "impact": "Mass instability and population stress"
+    },
+    "decision_integrity_score": {
+      "delta": -0.25,
+      "impact": "Collapse from stable system to systemic instability"
+    }
+  },
+
+  "recovery_dynamics": {
+    "cyber_recovery_time": "medium_term",
+    "economic_recovery_time": "long_term",
+    "social_recovery_time": "long_term",
+    "legal_recovery_time": "medium_to_long_term",
+    "recovery_pattern": "conflict resolution → economic rebuilding → institutional restoration → social stabilization",
+    "recovery_complexity": "high"
+  },
+
+  "risk_assessment": {
+    "overall_risk_level": "extreme",
+    "system_stability": "collapsed",
+    "shock_resilience": "low",
+    "critical_vulnerabilities": [
+      "economic_dependency",
+      "social_fragmentation",
+      "institutional_breakdown"
+    ]
+  },
+
+  "uncertainty_model": {
+    "confidence_interval": {
+      "lower_bound": 0.52,
+      "upper_bound": 0.64
+    },
+    "sensitivity_factors": [
+      "conflict duration",
+      "international intervention",
+      "economic aid and reconstruction",
+      "domestic political stability"
+    ],
+    "model_uncertainty": "high",
+    "notes": "War outcomes are highly variable depending on geopolitical dynamics and duration"
+  },
+
+  "simulation_notes": {
+    "purpose": "Evaluates full systemic impact of war across sovereign domains",
+    "interpretation": "Represents worst-case multi-domain instability scenario",
+    "usage": "Defense strategy, national resilience planning, geopolitical risk modeling"
+  }
+}

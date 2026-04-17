@@ -1,0 +1,141 @@
+{
+  "scenario_name": "Systemic Social Instability Scenario",
+  "version": "3.0",
+  "type": "systemic_shock",
+  "category": "social_instability",
+  "description": "This scenario models a high-impact social instability event characterized by widespread unrest, institutional distrust, and societal fragmentation, triggering cascading effects across governance, economic systems, and cyber infrastructure.",
+
+  "time_horizon": "short_to_medium_term",
+
+  "shock_profile": {
+    "intensity": "high",
+    "duration": "variable",
+    "primary_target": "social_system",
+    "propagation_mode": "cross-domain cascading",
+    "instability_type": "civil_unrest_and_societal_fragmentation"
+  },
+
+  "input_variables": {
+    "cyber_stability": {
+      "value": 0.85,
+      "post_shock_value": 0.72,
+      "status": "disrupted",
+      "description": "Digital systems affected by misinformation, cyber incidents, and communication breakdown"
+    },
+    "ai_governance": {
+      "value": 0.82,
+      "post_shock_value": 0.70,
+      "status": "strained",
+      "description": "AI governance pressured by emergency measures and misinformation control"
+    },
+    "legal_coherence": {
+      "value": 0.84,
+      "post_shock_value": 0.65,
+      "status": "fragmented",
+      "description": "Legal inconsistencies due to emergency enforcement and institutional strain"
+    },
+    "economic_resilience": {
+      "value": 0.83,
+      "post_shock_value": 0.68,
+      "status": "stressed",
+      "description": "Economic slowdown due to instability, disruptions, and reduced productivity"
+    },
+    "social_stability": {
+      "value": 0.80,
+      "post_shock_value": 0.50,
+      "status": "collapsed",
+      "description": "Severe unrest, protests, institutional distrust, and social fragmentation"
+    }
+  },
+
+  "computation": {
+    "formula": "D = 0.25C + 0.20A + 0.20L + 0.20E + 0.15S",
+    "baseline_score": 0.83,
+    "post_shock_score": 0.67,
+    "score_delta": -0.16,
+    "classification": "Moderate to High Risk System",
+    "confidence_level": "high"
+  },
+
+  "shock_propagation": {
+    "primary_impact": "social_stability",
+    "secondary_effects": [
+      "economic_resilience",
+      "legal_coherence"
+    ],
+    "tertiary_effects": [
+      "ai_governance",
+      "cyber_stability"
+    ],
+    "propagation_pattern": "social unrest → economic disruption → legal fragmentation → cyber instability",
+    "propagation_type": "cascading_with_feedback_loops"
+  },
+
+  "expected_output_shifts": {
+    "cyber_stability": {
+      "delta": -0.13,
+      "impact": "Increased cyber incidents and communication disruptions"
+    },
+    "ai_governance": {
+      "delta": -0.12,
+      "impact": "Regulatory stress and reactive governance"
+    },
+    "legal_coherence": {
+      "delta": -0.19,
+      "impact": "Emergency measures weaken legal consistency"
+    },
+    "economic_resilience": {
+      "delta": -0.15,
+      "impact": "Productivity loss and market instability"
+    },
+    "social_stability": {
+      "delta": -0.30,
+      "impact": "Severe societal instability and trust breakdown"
+    },
+    "decision_integrity_score": {
+      "delta": -0.16,
+      "impact": "System shifts from stable to moderate-high risk state"
+    }
+  },
+
+  "recovery_dynamics": {
+    "social_recovery_time": "medium_to_long_term",
+    "economic_recovery_time": "medium_term",
+    "legal_recovery_time": "medium_term",
+    "cyber_recovery_time": "short_to_medium_term",
+    "recovery_pattern": "social stabilization → institutional trust rebuilding → economic normalization → governance stabilization",
+    "recovery_complexity": "high"
+  },
+
+  "risk_assessment": {
+    "overall_risk_level": "high",
+    "system_stability": "degraded",
+    "shock_resilience": "moderate",
+    "critical_vulnerabilities": [
+      "public_trust_erosion",
+      "institutional_weakness",
+      "information_disorder"
+    ]
+  },
+
+  "uncertainty_model": {
+    "confidence_interval": {
+      "lower_bound": 0.64,
+      "upper_bound": 0.70
+    },
+    "sensitivity_factors": [
+      "government response effectiveness",
+      "media and information control",
+      "economic support measures",
+      "institutional trust recovery"
+    ],
+    "model_uncertainty": "moderate",
+    "notes": "Outcome variability depends heavily on governance response and public trust dynamics"
+  },
+
+  "simulation_notes": {
+    "purpose": "Evaluates systemic impact of social instability across sovereign domains",
+    "interpretation": "Highlights social system as a critical trigger of cross-domain instability",
+    "usage": "Public policy design, crisis management, and institutional resilience planning"
+  }
+}

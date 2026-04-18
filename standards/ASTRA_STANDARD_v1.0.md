@@ -1,17 +1,61 @@
 ASTRA STANDARD™ v1.0
 
 Deterministic Sovereign Scoring Contract Framework
-
 Final Absolute Edition — Audit-Proof Specification
 
 
 ---
 
-1. FORMAL DECLARATION
+1. SCOPE
 
-ASTRA STANDARD™ v1.0 defines a deterministic, bounded, and audit-enforced scoring contract for evaluating decision integrity across multi-dimensional governance systems.
+This standard defines a deterministic, bounded, and audit-enforced scoring framework for evaluating decision integrity across multi-dimensional governance systems.
 
-This standard establishes:
+It applies to:
+
+Sovereign decision systems
+
+Policy evaluation frameworks
+
+AI governance scoring models
+
+Risk and resilience analytics
+
+
+
+---
+
+2. NORMATIVE LANGUAGE
+
+The key words “MUST”, “MUST NOT”, “SHOULD”, “SHOULD NOT”, and “MAY” in this document are to be interpreted as described in RFC 2119.
+
+
+---
+
+3. TERMS AND DEFINITIONS
+
+Deterministic
+A system in which identical inputs always produce identical outputs.
+
+Bounded
+A system where all outputs lie within a predefined finite interval.
+
+Auditability
+The property that all computations are traceable, explainable, and verifiable.
+
+Input Integrity
+The requirement that all inputs are valid, complete, and within defined bounds.
+
+Statistical Validity
+Conformance of statistical computations to accepted mathematical definitions.
+
+
+---
+
+4. FORMAL DECLARATION
+
+ASTRA STANDARD™ v1.0 establishes a deterministic, bounded, and audit-enforced scoring contract.
+
+This standard defines:
 
 A strict and closed input schema
 
@@ -23,24 +67,24 @@ A statistically valid uncertainty extension
 
 
 This document is normative.
-All implementations claiming compliance MUST conform to every requirement defined herein.
+All implementations claiming compliance MUST adhere to all requirements defined herein.
 
 
 ---
 
-2. DESIGN PRINCIPLES (AXIOMATIC FOUNDATION)
+5. DESIGN PRINCIPLES (AXIOMATIC FOUNDATION)
 
-2.1 Determinism
+5.1 Determinism
 
 All outputs MUST be fully reproducible for identical inputs.
 
-2.2 Boundedness
+5.2 Boundedness
 
-All outputs MUST lie within the closed interval:
+All outputs MUST satisfy:
 
-0 \leq D \leq 1
+0 <= D <= 1
 
-2.3 Auditability
+5.3 Auditability
 
 All computations MUST be:
 
@@ -51,24 +95,24 @@ Explainable
 Verifiable
 
 
-2.4 Input Integrity
+5.4 Input Integrity
 
 Only valid, defined, and bounded inputs are permitted.
 
-2.5 Numerical Safety
+5.5 Numerical Safety
 
 NaN, infinite, or undefined values MUST be rejected.
 
-2.6 Statistical Validity
+5.6 Statistical Validity
 
 All statistical outputs MUST satisfy formal mathematical correctness.
 
 
 ---
 
-3. INPUT SCHEMA (MANDATORY)
+6. INPUT SCHEMA (MANDATORY)
 
-3.1 Required Variables
+6.1 Required Variables
 
 Variable	Type	Range
 
@@ -79,7 +123,7 @@ economic_resilience	float	[0,1]
 social_stability	float	[0,1]
 
 
-3.2 Constraints
+6.2 Constraints
 
 All variables MUST be present
 
@@ -90,12 +134,12 @@ Values MUST be finite real numbers
 Values MUST satisfy:
 
 
-0 \leq x_i \leq 1
+0 <= x_i <= 1
 
 
 ---
 
-4. WEIGHT SYSTEM (CANONICAL)
+7. WEIGHT SYSTEM (CANONICAL)
 
 Dimension	Weight
 
@@ -106,17 +150,17 @@ economic_resilience	0.20
 social_stability	0.15
 
 
-Constraints
+7.1 Constraints
 
 Each weight MUST satisfy:
 
 
-0 \leq w_i \leq 1
+0 <= w_i <= 1
 
-Total weight:
+Total weight MUST satisfy:
 
 
-\sum_{i=1}^{n} w_i = 1
+sum(w_i) = 1
 
 Canonical weights MUST be immutable
 
@@ -124,11 +168,11 @@ Canonical weights MUST be immutable
 
 ---
 
-5. CORE SCORING FUNCTION
+8. CORE SCORING FUNCTION
 
 The ASTRA score is defined as:
 
-D = \sum_{i=1}^{n} w_i \cdot x_i
+D = sum(w_i * x_i)
 
 Properties
 
@@ -144,28 +188,28 @@ Monotonic
 
 ---
 
-6. RISK CLASSIFICATION FUNCTION
+9. RISK CLASSIFICATION FUNCTION
 
 Score Range	Classification
 
 ≥ 0.75	Low Risk
-0.60 – 0.74	Moderate Risk
+0.60–0.74	Moderate Risk
 < 0.60	High Risk
 
 
 
 ---
 
-7. STATISTICAL EXTENSION (STANDARDIZED OPTIONAL MODULE)
+10. STATISTICAL EXTENSION (OPTIONAL MODULE)
 
-7.1 Minimum Requirements
+10.1 Minimum Requirements
 
 Sample size MUST be ≥ 2
 
 All values MUST be finite
 
 
-7.2 Required Metrics
+10.2 Required Metrics
 
 Mean
 
@@ -176,18 +220,18 @@ Standard deviation (ddof = 1)
 Minimum / Maximum
 
 
-7.3 Confidence Interval
+10.3 Confidence Interval
 
-CI = [P_{lower}, P_{upper}]
+CI = [P_lower, P_upper]
 
-Constraints
+Constraint:
 
-0 \leq lower < upper \leq 100
+0 <= lower < upper <= 100
 
 
 ---
 
-8. VALIDATION REQUIREMENTS (STRICT ENFORCEMENT)
+11. VALIDATION REQUIREMENTS
 
 Implementations MUST reject:
 
@@ -197,7 +241,7 @@ Extra variables
 
 Non-numeric values
 
-NaN / infinite values
+NaN or infinite values
 
 Out-of-bound inputs
 
@@ -211,7 +255,7 @@ All failures MUST be explicit (exception-based).
 
 ---
 
-9. NUMERICAL STABILITY REQUIREMENTS
+12. NUMERICAL STABILITY REQUIREMENTS
 
 Implementations MUST:
 
@@ -219,7 +263,7 @@ Clamp outputs to [0,1]
 
 Prevent floating-point drift
 
-Apply tolerance-based equality checks
+Apply tolerance-based comparisons
 
 Normalize near-zero statistical noise where applicable
 
@@ -227,11 +271,11 @@ Normalize near-zero statistical noise where applicable
 
 ---
 
-10. IMMUTABILITY & SECURITY
+13. IMMUTABILITY & SECURITY
 
 Canonical weights MUST be immutable
 
-No hidden state permitted
+No hidden state is permitted
 
 No side effects allowed
 
@@ -243,22 +287,25 @@ All functions MUST be pure
 
 ---
 
-11. COMPLIANCE CRITERIA
+14. COMPLIANCE CRITERIA
 
 An implementation is ASTRA-compliant ONLY IF:
 
-✔ All validation rules are enforced
-✔ Output is deterministic
-✔ Score is bounded
-✔ Statistical methods are valid
-✔ No silent failure paths exist
+All validation rules are enforced
+
+Output is deterministic
+
+Score is bounded
+
+Statistical methods are valid
+
+No silent failure paths exist
+
 
 
 ---
 
-12. FORMAL CLASSIFICATION
-
-The ASTRA system is formally defined as:
+15. FORMAL CLASSIFICATION
 
 > “A deterministic bounded linear scoring contract with strict schema enforcement and statistical audit guarantees.”
 
@@ -267,19 +314,31 @@ The ASTRA system is formally defined as:
 
 ---
 
-13. VERSION CONTROL
+16. LIMITATIONS
 
-Version: 1.0
+Does not model causality
 
-Status: Final Absolute Release
+Assumes normalized inputs
 
-Compatibility: Strict (no deviation permitted)
+Not probabilistic or stochastic
 
 
 
 ---
 
-14. CONFORMANCE STATEMENT
+17. VERSION CONTROL
+
+Version: 1.0
+
+Status: Final Absolute Release
+
+Compatibility: Strict
+
+
+
+---
+
+18. CONFORMANCE STATEMENT
 
 All compliant systems MUST declare:
 
@@ -290,35 +349,7 @@ All compliant systems MUST declare:
 
 ---
 
-15. SCOPE & APPLICATION DOMAIN (ADDED — CRITICAL FOR GLOBAL STANDARD)
-
-This standard is applicable to:
-
-Sovereign decision systems
-
-Policy evaluation frameworks
-
-AI governance scoring models
-
-Risk and resilience analytics
-
-
-
----
-
-16. LIMITATIONS (ADDED — REVIEWER-CRITICAL)
-
-This framework does not model causality
-
-It assumes normalized input domains
-
-It is not probabilistic or stochastic
-
-
-
----
-
-17. FINAL NOTE
+19. FINAL NOTE
 
 This standard is not a heuristic model.
 It is a formal evaluation contract designed for:
@@ -333,7 +364,7 @@ Deterministic decision architectures
 
 ---
 
-END OF STANDARD — ABSOLUTE LOCK 🔒🔐
+END OF STANDARD — TRUE ABSOLUTE LOCK 🔒🔐
 
 
 ---

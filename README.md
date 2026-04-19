@@ -1,205 +1,276 @@
-# ASTRA CORE™  
-## Global Sovereign Decision Intelligence Standard  
+# ASTRA™ — Deterministic Sovereign Governance Evaluation System
 
+**Global Sovereign Decision Intelligence Standard**  
 **Author:** Dr. B. Mazumdar  
-**Version:** 1.0   
+**Version:** v1.0 (Final Release)  
 **Status:** Institutional-Grade Global Standard  
-**License:** ASTRA CORE™ Sovereign Proprietary License  
 
 ---
 
-# Overview  
+## 📌 DOI (Zenodo)
 
-ASTRA CORE™ is an integrated sovereign decision intelligence architecture designed to evaluate, model, and optimize governance systems across cyber, artificial intelligence, legal, economic, and social domains.  
-
-It establishes a unified, reproducible, and audit-ready framework for sovereign-level analysis, enabling structured evaluation of national decision integrity and systemic stability.  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19483853.svg)](https://doi.org/10.5281/zenodo.19483853)
 
 ---
 
-# Core Architecture  
+## 🌐 Repository
 
-## ASTRA Index  
-Quantitative sovereign scoring system measuring Decision Integrity across five domains:  
-- Cyber Stability  
-- AI Governance  
-- Legal Coherence  
-- Economic Resilience  
-- Social Stability  
-
-## ASTRA Protocol  
-Decision validation layer ensuring consistency, traceability, and governance alignment across policy actions and institutional processes.  
-
-## ASTRA Simulation Grid  
-Scenario-based modeling environment supporting predictive analysis, risk simulation, and sovereign stress testing.  
-
-## ASTRA Doctrine  
-Normative and structural foundation defining governance principles, methodological constraints, and system integrity rules.  
+🔗 https://github.com/BidyutMazumdar/astra-core-global-standard  
 
 ---
 
-# Methodological Foundation  
+## 🧠 Overview
 
-The ASTRA CORE™ framework is based on a multi-variable weighted scoring model:  
+**ASTRA™ (Analytical System for Transparent Risk Assessment)** is a deterministic, auditable, and reproducible sovereign governance evaluation system designed to enable transparent, consistent, and policy-relevant decision analysis.
 
-D = 0.25C + 0.20A + 0.20L + 0.20E + 0.15S  
+It introduces a unified, multi-layered framework integrating:
 
-Where:  
-- C = Cyber Stability  
-- A = AI Governance  
-- L = Legal Coherence  
-- E = Economic Resilience  
-- S = Social Stability  
+- Formal specification  
+- Mathematical methodology  
+- Computational implementation  
+- Empirical validation  
+- Governance doctrine  
 
-All variables are normalized and calibrated for cross-country comparability and structural consistency.  
+into a single institutional-grade architecture.
 
 ---
 
-# Data Architecture  
+## ⚙️ Core Model
 
-The dataset is constructed using a composite proxy-based methodology derived from globally recognized governance and economic data environments.  
+**ASTRA Score Definition:**
 
-## Data Properties  
-- Multi-domain integration  
+**D = Σ (wᵢ · xᵢ),  0 ≤ D ≤ 1**
+
+### Where:
+
+- **C** = Cyber Stability  
+- **A** = AI Governance  
+- **L** = Legal Coherence  
+- **E** = Economic Resilience  
+- **S** = Social Stability  
+
+All variables are normalized within **[0,1]** under a strictly deterministic framework.
+
+---
+
+## 🏗️ System Architecture (6-PDF Standard Stack)
+
+### 📘 PDF 1 — ASTRA_CORE™
+- Full system architecture  
+- Core dimensions & scoring model  
+- Integration layer  
+
+### 📗 PDF 2 — ASTRA STANDARD™ v1.0
+- Deterministic scoring contract  
+- RFC-style normative definitions  
+- Compliance & validation rules  
+
+### 📙 PDF 3 — Methodology Framework
+- Data design & normalization  
+- Weighting logic  
+- Mathematical consistency  
+- Reproducibility framework  
+
+### 📕 PDF 4 — Implementation Protocol
+- Pseudocode  
+- Python reference implementation  
+- Validation logic  
+- Deployment architecture  
+
+### 📓 PDF 5 — Validation & Case Analysis
+- Sample country scoring  
+- Comparative analysis  
+- Sensitivity validation  
+- Policy interpretation  
+
+### 📒 PDF 6 — Doctrine & Philosophy
+- Governance principles  
+- Ethical framework  
+- Deterministic doctrine  
+- Transparency vs black-box systems  
+
+---
+
+## 🚀 Key Features
+
+- Deterministic execution (**same input → same output**)  
+- Full auditability and traceability  
+- Bounded and stable scoring system  
+- Transparent and interpretable logic  
 - Cross-country comparability  
-- Normalized scoring structure  
-- Audit-ready traceability  
-
-## Data Layers  
-- Quantitative scoring variables  
-- Composite index outputs  
-- Source mapping layer  
-- Qualitative proxy annotations  
+- Policy-aligned evaluation framework  
 
 ---
 
-# Data Source & Proxy Framework  
+## ✅ Validation Properties
 
-The ASTRA CORE™ dataset is constructed using a composite proxy-based methodology derived from globally recognized data environments, including:  
+- Monotonic behavior  
+- Bounded output (**0 ≤ D ≤ 1**)  
+- Stability under perturbation  
+- No stochastic variability  
+- Fully reproducible results  
 
-- Cybersecurity readiness frameworks  
-- AI governance benchmarks  
-- Rule-of-law and institutional indicators  
-- Financial and macroeconomic datasets  
-- Social and political stability metrics  
+---
 
-Each score represents a normalized synthesis of multiple indicators rather than a single-source dataset.  
+## 🎯 Use Cases
 
-This ensures:  
+- Sovereign risk assessment  
+- Governance benchmarking  
+- Policy evaluation systems  
+- Institutional diagnostics  
+- Comparative global analysis  
+
+---
+
+## ⚠️ Limitations
+
+- Dependent on input data quality  
+- Non-causal and non-predictive  
+- No stochastic uncertainty modeling  
+
+---
+
+## 🧩 System Structure
+
+```
+/docs        → Core documentation, whitepapers  
+/dataset     → Structured sovereign datasets  
+/models      → Scoring logic and computation  
+/simulation  → Scenario and stress testing  
+/standards   → Governance rules and doctrine  
+/visuals     → Charts and comparative analytics  
+```
+
+---
+
+## 🔬 Methodological Foundation
+
+ASTRA™ is based on a **multi-variable weighted deterministic model** ensuring:
+
 - Cross-country comparability  
 - Structural consistency  
 - Audit-ready traceability  
 
-Qualitative proxy notes provide interpretive transparency for each sovereign system.  
+Data is constructed using **composite proxy-based methodology**, derived from:
+
+- Cybersecurity readiness frameworks  
+- AI governance benchmarks  
+- Legal and institutional indicators  
+- Economic and financial datasets  
+- Social stability metrics  
 
 ---
 
-# System Structure  
+## 🧪 Validation Characteristics
 
-/docs  
-Core documentation, whitepapers, methodology, and global reports  
-
-/dataset  
-Structured datasets including versioned sovereign index data  
-
-/simulation  
-Scenario models, stress testing environments, and predictive systems  
-
-/models  
-Scoring logic, weighting systems, and computational frameworks  
-
-/standards  
-Official doctrine, governance rules, and system specifications  
-
-/visuals  
-Charts, trend analysis, and comparative visual intelligence  
+- Fully reproducible outputs  
+- Deterministic sensitivity behavior  
+- No randomness or probabilistic variation  
+- Stable under controlled perturbation  
 
 ---
 
-# Functional Capabilities  
+## 🏛️ Standardization Position
 
-- Sovereign decision integrity scoring  
-- Cross-country comparative analysis  
-- Policy modeling and validation  
-- Scenario-based risk simulation  
-- Governance system benchmarking  
-- Institutional performance diagnostics  
+ASTRA™ operates as a **structured global standard framework** for sovereign decision intelligence.
 
----
+Designed to be:
 
-# Governance Applications  
-
-ASTRA CORE™ is designed for:  
-
-- Government policy analysis  
-- Strategic intelligence systems  
-- Economic and financial stability assessment  
-- Cyber and AI governance evaluation  
-- International comparative research  
-- Institutional risk and resilience modeling  
-
----
-
-# Standardization Position  
-
-ASTRA CORE™ operates as a structured global standard framework for sovereign decision intelligence.  
-
-It is designed to be:  
 - Reproducible  
 - Scalable  
 - Audit-compatible  
 - Policy-integrated  
 
-The system aligns conceptually with global governance, economic, and cybersecurity evaluation environments while maintaining an independent structural architecture.  
+---
+
+## ⚖️ Positioning Statement
+
+**ASTRA™ is a deterministic evaluation standard — not a predictive AI system.**
+
+It is designed for **high-stakes governance environments** where:
+
+- Transparency  
+- Reproducibility  
+- Accountability  
+
+are critical.
 
 ---
 
-# Version Control  
+## 🔐 Authority Clause
 
-Version 1.0 represents the Absolute Final Lock Edition, incorporating:  
+This repository constitutes the **official ASTRA™ Global Standard Framework**.
+
+- All implementations must preserve structural integrity  
+- Unauthorized modification or commercialization is prohibited  
+
+---
+
+## 📜 License
+
+**Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**  
+
+- ✔ Attribution required  
+- ✔ Non-commercial use only  
+- ❌ No derivatives allowed  
+
+---
+
+## 📖 Citation (APA)
+
+Mazumdar, B. (2026).  
+*ASTRA™ — Deterministic Sovereign Governance Evaluation System: Standard, Methodology, Implementation, Validation, and Doctrine Framework (v1.0).*  
+Zenodo. https://doi.org/10.5281/zenodo.19483853  
+
+---
+
+## 🧭 Integration Ecosystem
+
+- **GitHub Repository:**  
+  https://github.com/BidyutMazumdar/astra-core-global-standard  
+
+- **Zenodo DOI:**  
+  https://doi.org/10.5281/zenodo.19483853  
+
+- **ORCID:**  
+  https://orcid.org/0009-0007-5615-3558  
+
+---
+
+## 🏁 Final Statement
+
+**ASTRA™ establishes a transition from conceptual governance modeling to a deterministic, auditable, and institutionally deployable global standard system.**
+
+It represents a unified architecture integrating **data, methodology, implementation, validation, and doctrine** into a single structured and policy-grade evaluation framework.
+
+---
+
+## 🔒 Version Control
+
+**Version v1.0 — Final Lock Release**
+
+Includes:
 
 - Full architectural integration  
+- Deterministic scoring standardization  
 - Audit-grade dataset structure  
-- Methodological standardization  
-- Traceability and proxy framework  
-- Institutional-grade documentation  
+- Institutional documentation stack  
 
-All future updates will follow controlled version releases with documented changes.  
+All future updates will follow **controlled and versioned releases**.
 
 ---
 
-# Authority Clause  
+## 📊 Project Status
 
-This document constitutes the official ASTRA CORE™ Global Sovereign Decision Intelligence Standard.  
-
-All implementations, adaptations, and derivative analytical systems must preserve the structural integrity of the ASTRA CORE™ methodology.  
-
-Unauthorized replication, modification, or commercialization of the framework is strictly prohibited.  
+![Status](https://img.shields.io/badge/status-active-success)  
+![Standard](https://img.shields.io/badge/standard-institutional--grade-blue)  
+![License](https://img.shields.io/badge/license-CC--BY--NC--ND%204.0-lightgrey)  
+![Reproducibility](https://img.shields.io/badge/reproducibility-100%25-brightgreen)  
 
 ---
 
-# Final Statement  
+## 🌍 Keywords
 
-ASTRA CORE™ establishes a unified global architecture for sovereign decision intelligence, integrating data, methodology, and governance logic into a single structured system.  
+Deterministic Governance • Sovereign Risk Assessment • Governance Index • AI Governance • Cybersecurity • Rule of Law • Economic Resilience • Social Stability • Policy Analytics • Decision Intelligence • Transparent AI • Auditability • Reproducible Systems • Global Governance Standards
 
-It represents a complete transition from conceptual framework to institutional-grade global standard.
-
-# Scope and Limitation Clause  
-
-ASTRA CORE™ is a structured analytical and modeling framework designed for comparative sovereign evaluation and policy-oriented research.  
-
-It operates as a proxy-based system and does not rely on single-source official datasets.  
-
-The index and associated outputs are intended for:  
-
-- Analytical modeling  
-- Comparative governance assessment  
-- Policy framework development  
-
-They are not intended to:  
-
-- Represent official sovereign rankings  
-- Replace institutional statistical systems  
-- Serve as direct policy enforcement instruments  
-
-All outputs should be interpreted within the methodological and structural boundaries defined by the ASTRA CORE™ framework.
-
+---
